@@ -44,7 +44,7 @@ function printValues(int $user_amount, string $params, int &$counter, int &$aver
 }
 
 // 2
-$numb_arr = [1234, 2321, 1221, 2345, 1221];
+$numb_arr = [4321, 2321, 1221, 2345, 1221];
 
 // c
 function getPalindorms(array $arr): int
@@ -87,11 +87,87 @@ $even_values = getEventOrOdd($numb_arr, 'even');
 $odd_values = getEventOrOdd($numb_arr, 'odd');
 
 // f
-// function getOrdered(array $arr){
+// function getOrdered(array $arr)
+// {
+//     foreach ($arr as $numb) {
+//         $counter = 0;
+//         $str_value = (string)$numb;
+//         $firsth_symb = $str_value[0];
+//         $last_symb = $str_value[-1];
 
+//         if ($firsth_symb > $last_symb) {
+//             $index = 0;
+//             for ($i = $firsth_symb; $i < $last_symb; $i--) {
+//                 if ($i === $str_value[$index]) {
+//                     $counter++;
+//                     $index++;
+//                 }
+//             }
+//         }
+
+//         return $counter;
+//     }
 // }
 
+// echo getOrdered($numb_arr);
+
+// 3
+function printCircle()
+{
+    for ($i = 1; $i <= 10; $i++) {
+        echo "<div class='circle'></div>";
+    }
+}
+
+// 4
+function convertBinary(int $number)
+{
+    return bindec($number);
+}
+
+$user_value = 110110;
+$converted = convertBinary($user_value);
+
+// 5
+$value = 22;
+
+function numberToRoman(int $number)
+{
+    $map = ['M' => 1000, 'CM' => 900, 'D' => 500, 'CD' => 400, 'C' => 100, 'XC' => 90, 'L' => 50, 'XL' => 40, 'X' => 10, 'IX' => 9, 'V' => 5, 'IV' => 4, 'I' => 1];
+    $returnValue = '';
+    while ($number > 0) {
+        foreach ($map as $roman => $int) {
+            if ($number >= $int) {
+                $number -= $int;
+                $returnValue .= $roman;
+                break;
+            }
+        }
+    }
+    return $returnValue;
+}
+
 ?>
+
+<style>
+    .circle {
+        float: left;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: blue;
+    }
+
+    .clearfix {
+        overflow: auto;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+</style>
 
 <div>
     <?= printValues($user_amount, 'normal', $counter, $average) ?>
@@ -109,4 +185,24 @@ $odd_values = getEventOrOdd($numb_arr, 'odd');
     <?= "Even numbers: " . $even_values ?>
     <br>
     <?= "Odd numbers: " . $odd_values ?>
+</div>
+
+</br>
+
+<div class="clearfix">
+    <?= printCircle() ?>
+</div>
+
+</br>
+
+<div>
+    <p>Number: <?= $user_value ?></p>
+    <p>Converted: <?= $converted ?></p>
+</div>
+
+<br>
+
+<div>
+    <p>Number: <?= $value ?></p>
+    <p>Roman: <?= numberToRoman($value) ?></p>
 </div>
