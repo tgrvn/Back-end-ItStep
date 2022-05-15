@@ -44,7 +44,7 @@ function printValues(int $user_amount, string $params, int &$counter, int &$aver
 }
 
 // 2
-$numb_arr = [4321, 2321, 1221, 2345, 1221];
+$numb_arr = [4321, 7342, 2332, 9853, 6556];
 
 // c
 function getPalindorms(array $arr): int
@@ -87,29 +87,32 @@ $even_values = getEventOrOdd($numb_arr, 'even');
 $odd_values = getEventOrOdd($numb_arr, 'odd');
 
 // f
-// function getOrdered(array $arr)
-// {
-//     foreach ($arr as $numb) {
-//         $counter = 0;
-//         $str_value = (string)$numb;
-//         $firsth_symb = $str_value[0];
-//         $last_symb = $str_value[-1];
+function getOrdered(array $arr)
+{
 
-//         if ($firsth_symb > $last_symb) {
-//             $index = 0;
-//             for ($i = $firsth_symb; $i < $last_symb; $i--) {
-//                 if ($i === $str_value[$index]) {
-//                     $counter++;
-//                     $index++;
-//                 }
-//             }
-//         }
+    foreach ($arr as $number) {
+        $str_value = (string)$number;
+        $counter = 0;
+        $flag = false;
 
-//         return $counter;
-//     }
-// }
+        for ($i = 0; $i < strlen($str_value); $i++) {
+            $max = $str_value[0];
 
-// echo getOrdered($numb_arr);
+            if ($max > $str_value[$i]) {
+                $flag = true;
+            }
+
+            if ($flag) {
+                $flag = false;
+                $counter++;
+            }
+        }
+    }
+
+    return $counter;
+}
+
+$ordered_values = getOrdered($numb_arr);
 
 // 3
 function printCircle()
@@ -147,6 +150,51 @@ function numberToRoman(int $number)
     return $returnValue;
 }
 
+// 6
+$day_amount = 30;
+
+function printCalendar(int $day_amount)
+{
+    $count = 0;
+
+    for ($i = 1; $i <= $day_amount; $i++) {
+        $count++;
+
+        if ($i % 7 === 0 || $i % 7 === 6) {
+            echo "<td class='weekend'>$i</td>";
+        } else {
+            echo "<td class='normal'>$i</td>";
+        }
+
+        if ($count === 0) {
+            echo "<tr>";
+        } else if ($count === 7) {
+            $count = 0;
+            echo "</tr>";
+        }
+    }
+}
+
+// 7
+function printImage()
+{
+
+    for ($i = 0; $i <= 10; $i++) {
+
+        if ($i > 0) {
+            echo "<img src='./img/img$i.jpg'>";
+        }
+
+        if ($i === 5 || $i === 10) {
+            echo "</div>";
+        }
+
+        if ($i === 0 || $i === 5) {
+            echo "<div class='clearfix'>";
+        }
+    }
+}
+
 ?>
 
 <style>
@@ -167,6 +215,28 @@ function numberToRoman(int $number)
         clear: both;
         display: table;
     }
+
+    .normal:hover {
+        background-color: black;
+        color: #fff;
+    }
+
+    .weekend {
+        color: red;
+    }
+
+    .images {
+        margin: 0 auto;
+        width: max-content;
+        padding: 20px;
+    }
+
+    img {
+        float: left;
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+    }
 </style>
 
 <div>
@@ -185,6 +255,8 @@ function numberToRoman(int $number)
     <?= "Even numbers: " . $even_values ?>
     <br>
     <?= "Odd numbers: " . $odd_values ?>
+    <br>
+    <?= "Ordered numbers: " . $ordered_values ?>
 </div>
 
 </br>
@@ -205,4 +277,14 @@ function numberToRoman(int $number)
 <div>
     <p>Number: <?= $value ?></p>
     <p>Roman: <?= numberToRoman($value) ?></p>
+</div>
+
+<table>
+    <tbody>
+        <?= printCalendar($day_amount) ?>
+    </tbody>
+</table>
+
+<div class="images">
+    <?= printImage() ?>
 </div>
