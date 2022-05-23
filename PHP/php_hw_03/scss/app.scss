@@ -1,0 +1,116 @@
+.container {
+    width: 1200px;
+    margin: 0 auto;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 500px;
+        margin: 20px auto;
+
+        select {
+            text-transform: capitalize;
+        }
+
+        .by-price {
+            display: flex;
+            gap: 10px;
+
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            input {
+                flex-grow: 1;
+            }
+
+        }
+
+        .by-count {
+            display: flex;
+            gap: 10px;
+            
+            .radio {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            p{
+                margin: 0;
+            }
+        }
+    }
+
+    .sort {
+        margin: 20px 0;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fruits {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .fruit-card {
+        text-align: center;
+        outline: 2px solid blue;
+        border-radius: 10px;
+
+        h2 {
+            text-transform: uppercase;
+        }
+    }
+
+    .links {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+
+        .link {
+            width: 160px;
+            padding: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            img {
+                object-fit: contain;
+                width: 100px;
+                height: 100px;
+            }
+
+            h2 {
+                text-transform: uppercase;
+                margin: 10px 0;
+            }
+
+            &:hover {
+                outline: 1px solid blue;
+            }
+        }
+    }
+
+    .countries {
+        display: block;
+        width: 300px;
+        margin: 10px auto;
+        padding: 5px;
+        text-align: center;
+        text-transform: capitalize;
+    }
+}
