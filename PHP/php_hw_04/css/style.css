@@ -1,0 +1,92 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  gap: 20px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+.container .couese-switch {
+  width: max-content;
+  border: 2px solid violet;
+  padding: 10px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+.container .couese-switch select {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  padding: 5px;
+  text-transform: uppercase;
+}
+.container .couese-switch button {
+  margin: 30px auto;
+}
+.container .fruit-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.container .fruit-cards .card {
+  text-align: center;
+  padding: 10px;
+  border: 2px solid violet;
+  border-radius: 10px;
+}
+.container .fruit-cards .card h2 {
+  text-transform: uppercase;
+}
+.container form {
+  margin: 0 auto;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.container form input {
+  width: 400px;
+  padding: 6px;
+}
+.container .statistic-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: max-content;
+  margin: 0 auto;
+}
+.container .statistic-cards .stat {
+  background-color: violet;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  width: 200px;
+  padding: 10px;
+}
+.container .statistic-cards .stat h3 {
+  text-transform: uppercase;
+}
+
+.btn {
+  display: block;
+  width: 150px;
+  outline: 0;
+  border: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 10px;
+  background-color: violet;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */

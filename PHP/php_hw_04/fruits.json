@@ -1,0 +1,11 @@
+[
+  { "name": "lemon", "type": "citrus", "price": 50, "count": 15 },
+  { "name": "orange", "type": "citrus", "price": 60, "count": 17 },
+  { "name": "lime", "type": "citrus", "price": 60, "count": 5 },
+  { "name": "apple", "type": "fetus", "price": 15, "count": 100 },
+  { "name": "pineapple", "type": "grass", "price": 120, "count": 5 },
+  { "name": "melon", "type": "fetus", "price": 30, "count": 8 },
+  { "name": "watermelon", "type": "fetus", "price": 20, "count": 4 },
+  { "name": "strawberry", "type": "berry", "price": 70, "count": 50 },
+  { "name": "blackberry", "type": "berry", "price": 90, "count": 100 }
+]
