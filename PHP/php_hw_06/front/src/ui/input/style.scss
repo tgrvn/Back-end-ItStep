@@ -1,0 +1,22 @@
+input {
+    display: block;
+    margin: 16px auto;
+    border: none;
+    border-radius: 6px;
+    padding: 8px;
+    width: 400px;
+    outline: 3px solid var(--secondary-light);
+    transition: 0.2s;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 1px 3px var(--secondary-dark);
+    }
+}

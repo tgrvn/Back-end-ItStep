@@ -1,0 +1,9 @@
+.card {
+    border-radius: 10px;
+    outline: 2px solid var(--secondary-light);
+    max-width: 100%;
+    padding: 20px;
+    background-color: var(--primary);
+    text-transform: uppercase;
+    box-shadow: 0 0 10px 1px var(--secondary-light);
+}

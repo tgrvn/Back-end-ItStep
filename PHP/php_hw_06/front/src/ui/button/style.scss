@@ -1,0 +1,25 @@
+button {
+    display: block;
+    border: none;
+    border-radius: 6px;
+    margin: 16px auto;
+    padding: 8px;
+    width: 400px;
+    outline: 3px solid var(--secondary-light);
+    background-color: var(--secondary-light);
+    transition: 0.2s;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--light);
+    letter-spacing: 3px;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 0 10px 1px var(--secondary-light);
+    }
+
+    &:active {
+        background-color: var(--secondary-dark);
+        outline: 3px solid var(--secondary-dark);
+    }
+}
