@@ -1,0 +1,12 @@
+form {
+  margin: 0 auto;
+  margin-top: 80px;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+}
+form .button {
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=form.css.map */

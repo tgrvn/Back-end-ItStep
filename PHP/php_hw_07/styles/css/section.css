@@ -1,0 +1,15 @@
+section {
+  width: 100%;
+  min-height: 100vh;
+  border-top: 2px solid var(--s-light);
+  padding: 40px 0;
+  background-color: var(--p-dark);
+  scroll-margin-top: 60px;
+}
+section h2 {
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/*# sourceMappingURL=section.css.map */

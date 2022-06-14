@@ -1,0 +1,27 @@
+header {
+  width: 100%;
+  box-shadow: 2px 0 10px 1px var(--s);
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  background-color: var(--p-dark);
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ul {
+    display: flex;
+    gap: 10px;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 20px;
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.random-error {
+  margin: 10px 0;
+  font-size: 14px;
+  color: var(--error);
+}
+
+.error-active {
+  color: var(--error-active);
+}
+
+/*# sourceMappingURL=errors.css.map */

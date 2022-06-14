@@ -1,0 +1,15 @@
+:root {
+  --p: #212121;
+  --p-light: #484848;
+  --p-lightner: #616161;
+  --p-dark: #000000;
+
+  --s: #ab47bc;
+  --s-light: #df78ef;
+  --s-dark: #790e8b;
+
+  --light: #fff;
+
+  --error: #9e9e9e;
+  --error-active: #ef5350;
+}

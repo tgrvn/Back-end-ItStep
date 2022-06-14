@@ -1,0 +1,10 @@
+@import url("./resets.css");
+@import url("./colors.css");
+
+@import url("./css/navigation.css");
+@import url("./css/all-fruits.css");
+@import url("./css/section.css");
+@import url("./css/input.css");
+@import url("./css/button.css");
+@import url("./css/form.css");
+@import url("./css/errors.css");

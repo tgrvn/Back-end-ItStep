@@ -1,0 +1,25 @@
+.all-fruits {
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.all-fruits__card {
+  padding: 10px 20px;
+  outline: 2px solid var(--s-light);
+  background-color: var(--p);
+}
+.all-fruits__card h3 {
+  margin-bottom: 5px;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.all-fruits__card h4 {
+  margin-bottom: 2px;
+  font-size: 20px;
+}
+.all-fruits__card p {
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=all-fruits.css.map */

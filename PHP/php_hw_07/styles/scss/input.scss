@@ -1,0 +1,30 @@
+.input {
+  width: 400px;
+  padding: 10px;
+  border: 0;
+  outline: 3px solid var(--s-dark);
+  background-color: var(--p-light);
+  color: var(--light);
+  border-radius: 2px;
+
+  &::placeholder {
+    text-transform: capitalize;
+    color: var(--light);
+  }
+
+  &:focus {
+    outline: 0;
+    background-color: var(--p-lightner);
+    outline: 3px solid var(--s-light);
+
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
