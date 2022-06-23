@@ -36,3 +36,7 @@ ul {
   margin: 0 auto;
   width: 1200px;
 }
+
+.container h2 {
+  margin-top: 20px;
+}

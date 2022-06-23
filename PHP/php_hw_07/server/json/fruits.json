@@ -1,13 +1,1 @@
-[
-  { "name": "orange", "type": "citrus", "price": "60", "count": "17" },
-  { "name": "lime", "type": "citrus", "price": "60", "count": "5" },
-  { "name": "apple", "type": "fetus", "price": "15", "count": "100" },
-  { "name": "pineapple", "type": "grass", "price": "120", "count": "5" },
-  { "name": "melon", "type": "fetus", "price": "30", "count": "8" },
-  { "name": "watermelon", "type": "fetus", "price": "20", "count": "4" },
-  { "name": "blackberry", "type": "berry", "price": "90", "count": "100" },
-  { "name": "fruit", "type": "test", "price": "20", "count": "20" },
-  { "name": "Testing form", "type": "test", "count": "10", "price": "10" },
-  { "name": "asdasd", "type": "asdasdsad", "count": "12", "price": "12" },
-  { "name": "TEst", "type": "aTES", "count": "101", "price": "10" }
-]
+[{"name":"orange","type":"citrus","price":"60","count":"17"},{"name":"lime","type":"citrus","price":"60","count":"5"},{"name":"apple","type":"fetus","price":"15","count":"100"},{"name":"pineapple","type":"grass","price":"120","count":"5"},{"name":"melon","type":"fetus","price":"30","count":"8"},{"name":"watermelon","type":"fetus","price":"20","count":"4"},{"name":"blackberry","type":"berry","price":"90","count":"100"},{"name":"Cherry","type":"Berry","count":"10","price":"15"}]

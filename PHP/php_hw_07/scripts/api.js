@@ -12,18 +12,18 @@ class Api {
       });
   }
 
-  //   sendData(url, data) {
-  //     try {
-  //       const request = await fetch(url, {
-  //         method: "POST",
-  //         body: data,
-  //       });
-  //       const response = await request.json();
-  //       return response;
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   }
+  async sendData(url, data) {
+    try {
+      const request = await fetch(url, {
+        method: "POST",
+        body: data,
+      });
+      const response = await request.json();
+      return response;
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
 
 const api = new Api();

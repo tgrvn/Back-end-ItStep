@@ -1,36 +1,53 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const RANDOM_FRUIT_URL =
-    "http://localhost/git/Back-end-ItStep/PHP/php_hw_07/server/api/getRandomFruit.php";
-
-  api.getData(RANDOM_FRUIT_URL, getRandomFruit);
-
+  const allFruits = document.querySelectorAll(".all-fruits")[1];
   const randomFruitsFrom = document.forms.random;
   const randomInput = document.querySelector("input[name=random]");
   const error = document.querySelector(".random-error");
 
-  let randomAmount = null;
+  randomFruitsFrom.addEventListener("submit", (e) =>
+    handlerSubmitRandom(e, allFruits)
+  );
 
-  randomFruitsFrom.addEventListener("submit", (e) => {
-    e.preventDefault();
-  });
-
-  randomInput.addEventListener("input", (e) => {
-    randomAmount = e.target.value;
-
-    if (randomAmount > 30) {
-      error.classList.add("error-active");
-    } else {
-      
-    }
-  });
-
-  function getRandomFruit(data) {
-    const randomFruit = data;
-
-    if (randomFruit) {
-      randomFruit.map((fruit) => {
-        new Card(fruit, 1);
-      });
-    }
-  }
+  randomInput.addEventListener("input", (e) => handlerRandomInput(e, error));
 });
+
+const RANDOM_FRUIT_URL = "./server/api/getRandomFruit.php";
+
+let randomAmount = null;
+
+async function handlerSubmitRandom(e, allFruits) {
+  e.preventDefault();
+  allFruits.innerHTML = "";
+  randomAmount =
+    randomAmount === null || randomAmount === undefined ? 1 : randomAmount;
+
+  const formData = new FormData();
+  formData.append("count", randomAmount);
+
+  const randomFruits = await api.sendData(RANDOM_FRUIT_URL, formData);
+
+  getRandomFruit(randomFruits);
+}
+
+function handlerRandomInput(e, error) {
+  randomAmount = e.target.value;
+
+  if (randomAmount > 30) {
+    error.classList.add("error-active");
+    e.target.value = 30;
+  } else {
+    error.classList.remove("error-active");
+  }
+}
+
+function getRandomFruit(data) {
+  const randomFruit = data;
+
+  if (randomFruit) {
+    randomFruit.map((fruit) => {
+      new Card(fruit, 1);
+    });
+  }
+}
+
+api.getData(RANDOM_FRUIT_URL, getRandomFruit);

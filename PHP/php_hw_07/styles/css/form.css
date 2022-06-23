@@ -4,6 +4,7 @@ form {
   width: max-content;
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 form .button {
   margin-top: 10px;
