@@ -1,3 +1,11 @@
+<?php
+if (isset($_COOKIE["role"]) && $_COOKIE["role"] === "admin") {
+    header("Location: admin.php");
+} else if (!isset($_COOKIE["role"]) && empty($_COOKIE["role"])) {
+    header("Location: index.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +40,9 @@
                         <ul>
                             <!-- <li><a href="#create-user">create user</a></li> -->
                             <!-- <li><a href="#login">login</a></li> -->
-                            <li><a href="#">log out</a></li>
+                            <?php
+                            include_once "views/logout.php";
+                            ?>
                         </ul>
                     </nav>
                 </div>

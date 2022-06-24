@@ -14,12 +14,21 @@ let userLogin = null;
 let userPassword = null;
 
 async function handlerSubmitLogin(e) {
+  e.preventDefault();
+  
   const formData = new FormData();
   formData.append("login", userLogin);
   formData.append("password", userPassword);
 
   const response = await api.sendData(LOGIN_URL, formData);
-  console.log("response >", response);
+
+  if (response === "admin") {
+    window.location.href = "admin.php";
+  } else if (response === "user") {
+    window.location.href = "user.php";
+  } else if (response === "error") {
+    console.log("user not found");
+  }
 
   e.srcElement.login.value = "";
   e.srcElement.password.value = "";

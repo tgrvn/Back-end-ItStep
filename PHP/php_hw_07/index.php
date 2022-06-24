@@ -1,3 +1,13 @@
+<?php
+
+if (isset($_COOKIE["role"]) && $_COOKIE["role"] === "admin") {
+  header("Location: admin.php");
+} else if (isset($_COOKIE["role"]) && $_COOKIE["role"] === "user") {
+  header("Location: user.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,7 +69,7 @@
   </div>
 
   <?php
-    include_once "views/login.php"
+  include_once "views/login.php";
   ?>
 
   <script src="./scripts/navigation.js"></script>

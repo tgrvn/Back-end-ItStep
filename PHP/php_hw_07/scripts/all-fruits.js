@@ -1,10 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const ALL_FRUITS_URL = "./server/api/getAllFruits.php";
 
-  api.getData(ALL_FRUITS_URL, getAllFruits);
-
-  function getAllFruits(data) {
-    const allFruits = data;
+  async function getAllFruits() {
+    const allFruits = await api.getData(ALL_FRUITS_URL);
 
     if (allFruits.length != 0) {
       allFruits.map((fruit) => {
@@ -12,4 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   }
+
+  getAllFruits();
 });
