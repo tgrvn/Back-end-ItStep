@@ -20,7 +20,9 @@ if (isSetUser($userLogin, $users) && isSetUser($userPassword, $users)) {
 function isSetUser($userData, $usersArray)
 {
     foreach ($usersArray as $key) {
-        return in_array($userData, $key);
+        if (in_array($userData, $key)) {
+            return true;
+        }
     }
 
     return false;

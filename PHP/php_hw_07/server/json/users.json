@@ -3,5 +3,10 @@
     "userName": "admin",
     "password": "4d24d3c939407e44f95adb89c1509716",
     "role": "admin"
+  },
+  {
+    "userName": "user",
+    "password": "1145b19bdfb4544115baa76b9f414972",
+    "role": "user"
   }
 ]

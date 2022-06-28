@@ -2,8 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const loginFrom = document.forms.login;
   const login = loginFrom.login;
   const password = loginFrom.password;
+  const error = document.querySelector(".error-active");
 
-  loginFrom.addEventListener("submit", (e) => handlerSubmitLogin(e));
+  loginFrom.addEventListener("submit", (e) => handlerSubmitLogin(e, error));
 
   login.addEventListener("input", (e) => handlerLoginInput(e));
   password.addEventListener("input", (e) => handlerLoginInput(e));
@@ -13,9 +14,10 @@ const LOGIN_URL = "./server/api/login.php";
 let userLogin = null;
 let userPassword = null;
 
-async function handlerSubmitLogin(e) {
+async function handlerSubmitLogin(e, error) {
+  error.textContent = "";
   e.preventDefault();
-  
+
   const formData = new FormData();
   formData.append("login", userLogin);
   formData.append("password", userPassword);
@@ -27,11 +29,8 @@ async function handlerSubmitLogin(e) {
   } else if (response === "user") {
     window.location.href = "user.php";
   } else if (response === "error") {
-    console.log("user not found");
+    error.textContent = "*invalid user name or password";
   }
-
-  e.srcElement.login.value = "";
-  e.srcElement.password.value = "";
 }
 
 function handlerLoginInput(e) {
