@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+  padding: 6px;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+  padding: 6px;
+}
