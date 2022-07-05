@@ -1,0 +1,14 @@
+header {
+  padding: 20px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  a {
+    text-transform: uppercase;
+    font-size: 26px;
+  }
+}

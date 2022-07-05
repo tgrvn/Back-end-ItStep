@@ -1,12 +1,9 @@
 .card {
-    border: 5px solid #212121;
     padding: 16px;
 
     img {
-        width: 100%;
         height: 270px;
         object-fit: contain;
-        border: 1px solid #212121;
     }
 
     h3 {
@@ -14,6 +11,8 @@
     }
 
     p {
+        word-wrap: break-word;
+        width: 100%;
         margin-top: 16px;
     }
 }
