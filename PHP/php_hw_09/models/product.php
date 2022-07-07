@@ -5,6 +5,7 @@ class Product
 {
     private $_name;
     private $_price;
+    private $_searchValue;
 
     public function __construct($mss)
     {
@@ -15,7 +16,8 @@ class Product
         }
 
         if (isset($mss["getSearch"])) {
-            $this->searchByName($mss["search"]);
+            $this->_searchValue = $mss["search"];
+            $this->searchByName();
             header("Location: index.php");
         }
     }
@@ -33,17 +35,21 @@ class Product
         }
     }
 
-    private function searchByName($str)
+    private function searchByName()
     {
         $products = JSON::getJSON();
-        if (count($products) > 0) {
-            foreach ($products as $product) {
-                if ($product["name"] === $str) {
-                    $_SESSION["finded"] = $product;
-                    break;
-                } else {
-                    $_SESSION["finded"] = "404";
-                }
+
+        if (is_array($products)) {
+            if (count($products) > 0) {
+                $_SESSION["finded"] = array_filter($products, function ($product) {
+                    if ($product["name"] === $this->_searchValue) {
+                        return true;
+                    }
+
+                    return false;
+                });
+            } else {
+                $_SESSION["finded"] = "404";
             }
         }
     }

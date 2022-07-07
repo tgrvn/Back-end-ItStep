@@ -5,6 +5,12 @@ include_once "./models/product.php";
 
 $product = new Product($_POST);
 
+if (isset($_SESSION["finded"]) && is_array($_SESSION["finded"])) {
+    if (count($_SESSION["finded"]) > 0) {
+        $findedProds = $_SESSION["finded"];
+    }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,17 +41,16 @@ $product = new Product($_POST);
     ?>
 
     <div class="products">
-        <?php if (isset($_SESSION["finded"]) && is_array($_SESSION["finded"])) { ?>
-            <div class="product">
-                <h3><?= $_SESSION["finded"]["name"] ?></h3>
-                <h3><?= $_SESSION["finded"]["price"] ?>$</h3>
-            </div>
-        <?php } else if (isset($_SESSION["finded"]) && $_SESSION["finded"] === "404") { ?>
+        <?php if (isset($findedProds)) { ?>
+            <?php foreach ($findedProds as $product) { ?>
+                <div class="product">
+                    <h3><?= $product["name"] ?></h3>
+                    <h3><?= $product["price"] ?>$</h3>
+                </div>
+            <?php } ?>
+        <?php } else { ?>
             <p>not found...</p>
-        <?php } else if (!isset($_SESSION["finded"])) { ?>
-            <p>search...</p>
         <?php } ?>
-
     </div>
 </body>
 
