@@ -1,0 +1,9 @@
+section {
+  padding: 20px 0;
+}
+
+section h3 {
+    text-transform: uppercase;
+    margin: 10px 0;
+    text-align: center;
+}

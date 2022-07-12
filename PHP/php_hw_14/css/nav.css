@@ -1,0 +1,15 @@
+nav {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+a {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+a:hover {
+  text-decoration: underline;
+}
