@@ -4,10 +4,10 @@ namespace controllers;
 
 use core\Controller;
 
-class DefaultController extends Controller
+class UserController extends Controller
 {
-    public function login()
+    public function message()
     {
-        return $this->render("login");
+        return $this->render("message");
     }
 }

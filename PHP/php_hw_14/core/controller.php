@@ -2,10 +2,6 @@
 
 namespace core;
 
-use User;
-
-session_start();
-
 include_once "./core/url.php";
 
 class Controller
@@ -17,6 +13,11 @@ class Controller
     public function setControllerName($name)
     {
         $this->controllerName = $name;
+    }
+
+    public function setLayoutTemplate($name)
+    {
+        $this->layoutTemplate = $name;
     }
 
     protected function render($view, $params = [])

@@ -1,51 +1,62 @@
 <?php
 
-class User
+namespace models;
+
+use models\Json;
+
+class User extends Json
 {
-    private $usersJSON = "models/json/users.json";
     private $userLogin;
     private $userPassword;
+    private $userRePassword;
+    private $userPhone;
+    private $userEmail;
+
 
     function __construct($mss)
     {
-        if (isset($mss["user-login"])) {
+        if (isset($mss["login-from"])) {
             $this->userLogin = $mss["log"];
             $this->userPassword = $mss["pass"];
-            $this->isAuth();
+            $this->userLoggin();
+        }
+
+        if (isset($mss["register-from"])) {
+            if ($mss["pass"] === $mss["re-pass"]) {
+                $this->userLogin = $mss["log"];
+                $this->userPassword = $mss["pass"];
+                $this->userEmail = $mss["email"];
+                $this->userPhone = $mss["phone"];
+                $this->userRePassword = $mss["re-pass"];
+
+                $userData = ["login" => $this->userLogin, "password" => $this->userPassword, "email" => $this->userEmail, "phone" => $this->userPhone];
+
+                $this->setJSON($userData);
+
+                header("location: index.php");
+            } else {
+                $_SESSION["error"] = "passwords is different";
+            }
         }
     }
 
-    public function getJSON()
+    private function userLoggin()
     {
-        if (file_exists($this->usersJSON)) {
-            $strJSON = file_get_contents($this->usersJSON);
+        $users = $this->getJSON();
+        $isSetUser = false;
 
-            return json_decode($strJSON, true);
+
+        foreach ($users as $user) {
+            if ($user["login"] === $this->userLogin && $user["password"] === $this->userPassword) {
+                $isSetUser = true;
+            }
         }
-    }
 
-    public function setJSON($mss)
-    {
-        $users = $this->getJSON();
-        $users[] = $mss;
-
-        $strJSON = json_encode($users);
-        file_put_contents($this->usersJSON, $strJSON);
-    }
-
-    public function isAuth()
-    {
-        $users = $this->getJSON();
-        $userData = ["username" => $this->userLogin, "password" => $this->userPassword];
-
-        if (in_array($userData, $users)) {
-            session_start();
+        if ($isSetUser) {
             $_SESSION["auth"] = 1;
-            session_write_close();
+            header("Location: index.php");
         } else {
-            session_start();
             $_SESSION["auth"] = 0;
-            session_write_close();
         }
     }
 }

@@ -1,1 +1,8 @@
-[{ "username": "admin", "password": "admin" }]
+[
+  {
+    "login": "admin",
+    "password": "asddsa",
+    "email": "warllalka@gmail.com",
+    "phone": "09902654867"
+  }
+]
