@@ -1,0 +1,19 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 40px 0;
+  gap: 20px;
+}
+.products__card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid #1e88e5;
+  padding: 20px;
+  color: #1e88e5;
+}
+.products__card h3 {
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=products.css.map */

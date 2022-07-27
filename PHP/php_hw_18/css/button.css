@@ -1,0 +1,22 @@
+.button {
+  padding: 10px 0;
+  width: 200px;
+  background-color: #1e88e5;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.button:hover {
+  filter: brightness(1.2);
+  box-shadow: 2px 2px 5px 1px #607d8b;
+}
+
+.back {
+  display: block;
+  margin: 20px auto;
+  background-color: #607d8b;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=button.css.map */

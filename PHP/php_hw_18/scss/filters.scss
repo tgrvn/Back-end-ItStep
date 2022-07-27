@@ -1,0 +1,45 @@
+[type="submit"] {
+  margin: 20px 0;
+}
+
+.filter {
+  padding: 8px 0;
+  display: flex;
+  gap: 0 40px;
+
+  &__price_min_max {
+    [type="number"] {
+      padding: 8px;
+      margin-right: 20px;
+      width: 160px;
+    }
+  }
+
+  &__sort {
+    display: flex;
+    gap: 4px;
+
+    &__title {
+      margin-right: 10px;
+    }
+
+    a {
+      color: #0000ff;
+      text-transform: uppercase;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:active {
+        color: #1a237e;
+      }
+    }
+  }
+
+  &__country,
+  &__make {
+    display: flex;
+    gap: 0 20px;
+  }
+}

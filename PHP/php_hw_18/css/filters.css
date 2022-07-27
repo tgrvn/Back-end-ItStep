@@ -1,0 +1,37 @@
+[type=submit] {
+  margin: 20px 0;
+}
+
+.filter {
+  padding: 8px 0;
+  display: flex;
+  gap: 0 40px;
+}
+.filter__price_min_max [type=number] {
+  padding: 8px;
+  margin-right: 20px;
+  width: 160px;
+}
+.filter__sort {
+  display: flex;
+  gap: 4px;
+}
+.filter__sort__title {
+  margin-right: 10px;
+}
+.filter__sort a {
+  color: #0000ff;
+  text-transform: uppercase;
+}
+.filter__sort a:hover {
+  text-decoration: underline;
+}
+.filter__sort a:active {
+  color: #1a237e;
+}
+.filter__country, .filter__make {
+  display: flex;
+  gap: 0 20px;
+}
+
+/*# sourceMappingURL=filters.css.map */
