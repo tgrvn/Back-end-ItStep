@@ -1,0 +1,56 @@
+.hotel {
+  &__single-item {
+    width: 90%;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+      height: 600px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+
+    p {
+      font-size: 18px;
+      text-transform: capitalize;
+    }
+
+    span {
+      background-color: #1976d2;
+      color: #fff;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 24px;
+    }
+  }
+
+  &__stars {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+
+    p {
+      margin-right: 16px;
+      font-size: 16px;
+    }
+  }
+
+  &__comments {
+    margin: 20px 0;
+
+    h4 {
+      margin: 10px 0;
+    }
+  }
+}

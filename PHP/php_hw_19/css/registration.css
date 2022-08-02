@@ -1,0 +1,17 @@
+.reg form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+  margin: 0 auto;
+  padding: 10px 0;
+  width: 400px;
+}
+.reg form button {
+  margin-top: 10px;
+}
+.reg form .error {
+  font-size: 14px;
+  color: #e57373;
+}
+
+/*# sourceMappingURL=registration.css.map */

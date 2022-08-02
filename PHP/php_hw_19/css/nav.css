@@ -1,0 +1,32 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+nav .navlinks {
+  display: flex;
+  gap: 0 40px;
+}
+nav .navlinks__navlink {
+  font-size: 20px;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+nav .navlinks__navlink:hover {
+  color: #1e88e5;
+  text-decoration: underline;
+}
+nav .navlinks .active {
+  color: #1e88e5;
+  text-decoration: underline;
+}
+nav .auth form {
+  display: flex;
+  gap: 0 8px;
+}
+nav .auth form input[type=password] {
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=nav.css.map */

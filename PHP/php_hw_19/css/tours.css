@@ -1,0 +1,59 @@
+.tours .filters {
+  padding: 10px 0;
+}
+.tours .filters form {
+  display: flex;
+  gap: 0 20px;
+}
+.tours .filters form select {
+  width: 150px;
+  padding: 0 10px;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+.tours .hotels {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 60px;
+  padding: 20px 0;
+}
+.tours .hotels__card {
+  display: block;
+}
+.tours .hotels__card h3 {
+  font-size: 26px;
+}
+.tours .hotels__card img {
+  margin: 16px 0;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+.tours .hotels__card__descr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tours .hotels__card__descr__city {
+  text-transform: capitalize;
+  font-size: 18px;
+}
+.tours .hotels__card__descr__stars {
+  display: flex;
+  align-items: center;
+  gap: 0 6px;
+}
+.tours .hotels__card__descr__stars span {
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+.tours .hotels__card__descr__stars img {
+  width: 26px;
+  height: 26px;
+  pointer-events: none;
+}
+.tours .hotels .empty {
+  color: gray;
+}
+
+/*# sourceMappingURL=tours.css.map */
