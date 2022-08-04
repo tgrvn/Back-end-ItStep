@@ -28,5 +28,16 @@ nav .auth form {
 nav .auth form input[type=password] {
   margin-right: 10px;
 }
+nav .authorized {
+  display: flex;
+  gap: 0 20px;
+  align-items: center;
+}
+nav .authorized__img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: red;
+}
 
 /*# sourceMappingURL=nav.css.map */

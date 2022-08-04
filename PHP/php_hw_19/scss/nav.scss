@@ -35,4 +35,16 @@ nav {
       }
     }
   }
+
+  .authorized {
+    display: flex;
+    gap: 0 20px;
+    align-items: center;
+    &__img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: red;
+    }
+  }
 }

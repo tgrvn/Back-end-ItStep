@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 include_once "./models/travels.php";
 include_once "./vendor/functions.php";

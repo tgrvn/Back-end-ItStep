@@ -37,11 +37,45 @@
   margin-right: 16px;
   font-size: 16px;
 }
+.hotel form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0;
+  margin: 0 auto;
+  margin: 20px 0;
+  padding: 10px 0;
+}
+.hotel form textarea {
+  padding: 10px;
+  height: 100px;
+  resize: none;
+}
+.hotel form button {
+  width: 200px;
+}
 .hotel__comments {
   margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
 }
 .hotel__comments h4 {
   margin: 10px 0;
+}
+.hotel__comments__single {
+  padding: 10px;
+  border: 2px solid #212121;
+  position: relative;
+}
+.hotel__comments__single h5 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+.hotel__comments__single .del {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-weight: 900;
 }
 
 /*# sourceMappingURL=hotel-page.css.map */
