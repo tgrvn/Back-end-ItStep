@@ -14,8 +14,8 @@
     <?php } else { ?>
         <div class="auth">
             <form method="post" action="./vendor/login.php">
-                <input class="primary-txt-input" type="text" name="login" placeholder="login">
-                <input class="primary-txt-input" type="password" name="pass" placeholder="password">
+                <input class="primary-txt-input" type="text" name="login" placeholder="login" required>
+                <input class="primary-txt-input" type="password" name="pass" placeholder="password" required>
 
                 <button class="btn-primary" type="submit" name="log">login</button>
             </form>

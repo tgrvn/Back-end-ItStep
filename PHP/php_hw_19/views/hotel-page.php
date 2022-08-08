@@ -52,6 +52,9 @@ $comments = $travels->getComments($_GET["id"]) ?? [];
                     } ?>
                 </div>
             <?php } ?>
+
+        <?php } else { ?>
+            <span>no comments yet...</span>
         <?php } ?>
     </div>
 </section>
